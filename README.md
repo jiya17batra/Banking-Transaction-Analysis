@@ -1,6 +1,6 @@
 # 🏦 Banking Transaction Analysis & Fraud Detection
 
-**Live demo:** _add your Streamlit Cloud URL here after deploying_
+**Live demo:**  https://banking-transaction-analysis-live.streamlit.app/
 
 An end-to-end data analytics project: synthetic banking transaction data →
 cleaning → SQL analytics → customer behavior analysis → rule-based fraud
