@@ -1,6 +1,6 @@
 # 🏦 Banking Transaction Analysis & Fraud Detection
 
-**Live demo:**  https://banking-transaction-analysis-live.streamlit.app/
+**Live demo:**  https://jiya17batra.github.io/Banking-Transaction-Analysis/
 
 An end-to-end data analytics project: synthetic banking transaction data →
 cleaning → SQL analytics → customer behavior analysis → rule-based fraud
