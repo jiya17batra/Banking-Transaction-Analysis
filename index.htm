@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banking Analysis HUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+
+    <header class="top-bar">
+      <span id="clock">00:00:00</span>
+      <span>NET: ACTIVE / SYS: NOMINAL</span>
+    </header>
+
+    <aside class="left-panel panel">
+      <h3>SYSTEM RESOURCES</h3>
+
+      <div class="resource">CPU1 <div class="bar"><div class="fill"></div></div></div>
+      <div class="resource">CPU2 <div class="bar"><div class="fill"></div></div></div>
+      <div class="resource">MEM <div class="bar"><div class="fill"></div></div></div>
+      <div class="resource">STORAGE <div class="bar"><div class="fill"></div></div></div>
+    </aside>
+
+    <main class="center-panel panel">
+      <h1 id="typing"></h1>
+
+      <div class="logs">
+        <p>> Initializing Banking Analysis...</p>
+        <p>> Connecting to Database...</p>
+        <p>> Loading Customer Records...</p>
+        <p>> Running Fraud Detection...</p>
+        <p class="ready">> STATUS: READY ✓</p>
+      </div>
+
+      <button id="enterBtn">ENTER DASHBOARD</button>
+    </main>
+
+    <aside class="right-panel panel">
+      <h3>DATA STREAM</h3>
+      <canvas id="waveCanvas"></canvas>
+    </aside>
+
+    <footer class="bottom-panel panel">
+      <h3>SYSTEM OWNER</h3>
+      <p>ID: JIYA_BATRA</p>
+      <p>ROLE: DATA ENGINEER</p>
+      <p>Status: ACTIVE</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

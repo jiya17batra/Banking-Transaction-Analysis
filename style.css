@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: #00eaff;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    grid-template-rows: 70px 1fr 170px;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+/* Animated moving glow lines */
+.dashboard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,255,0.08),
+        transparent
+    );
+    animation: scan 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+.panel {
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+    background: rgba(0, 20, 40, 0.25);
+    padding: 20px;
+}
+
+.top-bar {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #00eaff;
+    padding: 20px;
+    box-shadow: 0 0 15px #00eaff;
+}
+
+.left-panel h3,
+.right-panel h3,
+.bottom-panel h3 {
+    margin-bottom: 20px;
+}
+
+.center-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-panel h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px #00eaff;
+}
+
+.logs p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.ready {
+    color: #7dff7d;
+}
+
+button {
+    margin-top: 30px;
+    width: 250px;
+    padding: 15px;
+    background: transparent;
+    color: #00eaff;
+    border: 2px solid #00eaff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #00eaff;
+    color: black;
+    box-shadow: 0 0 25px #00eaff;
+}
+
+.resource {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.bar {
+    margin-top: 8px;
+    height: 14px;
+    border: 1px solid cyan;
+}
+
+.fill {
+    height: 100%;
+    width: 50%;
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+}
+
+#waveCanvas {
+    width: 100%;
+    height: 85%;
+    border: 1px solid cyan;
+    margin-top: 10px;
+}
+
+.bottom-panel {
+    grid-column: 2 / 3;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .top-bar,
+    .bottom-panel {
+        grid-column: auto;
+    }
+}
+
+.left-panel,
+.right-panel {
+    transition: transform 0.15s linear;
+    transform-style: preserve-3d;
+}
